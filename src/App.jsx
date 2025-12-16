@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Inicio from "./paginas/Inicio";
 import Compra from "./paginas/Compra";
 import Info_Producto from "./paginas/Info_Producto";
@@ -14,24 +14,24 @@ import Editar_Producto from "./paginas/Editar_Producto";
 import Not_Found from "./paginas/Not_Found";
 
 const App = () => {
-  return(
-    <BrowserRouter>
+  return (
+    <HashRouter>
       <Routes>
-        <Route path="*" element = {<Not_Found/>}/>
-        <Route path="/" element = {<Inicio/>}/>
-        <Route path="/Compra" element = {<Compra/>}/>
-        <Route path="/Ver_Informacion_Producto/:id_producto" element = {<Info_Producto/>}/>
-        <Route path="/Inicio_Sesion" element = {<Inicio_Sesion/>}/>
-        <Route path="/Registrarse" element = {<Registro/>}/>
-        <Route path="/Perfil_Cliente" element = {<Perfil_Cliente/>}/>
-        <Route path="/Informacion_Pedido/:id_pedido" element = {<Info_Pedido/>}/>
-        <Route path="/Carrito" element = {<Carrito/>}/>
-        <Route path="/Perfil_Vendedor" element = {<Perfil_Vendedor/>}/>
-        <Route path="/Registrar_Producto" element = {<Registro_Producto/>}/>
-        <Route path="/Editar_Producto/:id_producto" element = {<Editar_Producto/>}/>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/Compra" element={<Compra />} />
+        <Route path="/Ver_Informacion_Producto/:id_producto" element={<Info_Producto />} />
+        <Route path="/Inicio_Sesion" element={<Inicio_Sesion />} />
+        <Route path="/Registrarse" element={<Registro />} />
+        <Route path="/Perfil_Cliente" element={<Perfil_Cliente />} />
+        <Route path="/Informacion_Pedido/:id_pedido" element={<Info_Pedido />} />
+        <Route path="/Carrito" element={<Carrito />} />
+        <Route path="/Perfil_Vendedor" element={<Perfil_Vendedor />} />
+        <Route path="/Registrar_Producto" element={<Registro_Producto />} />
+        <Route path="/Editar_Producto/:id_producto" element={<Editar_Producto />} />
+        <Route path="*" element={<Not_Found />} />
       </Routes>
-    </BrowserRouter>
-  )
-}
+    </HashRouter>
+  );
+};
 
-export default App
+export default App;
